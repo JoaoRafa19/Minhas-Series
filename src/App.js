@@ -1,9 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Generos from "./components/generos";
 import Header from "./components/header";
 import Home from "./components/home";
-import axios from "axios";
 import NovoGenero from "./components/NovoGenero";
 import EditGenero from "./components/genero_edit";
 
