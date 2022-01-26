@@ -25,11 +25,17 @@ function Generos() {
     );
   };
   if (data.length === 0) {
-    return <div>Carregando...</div>;
+    return (
+      <div className="container">
+        <div class="alert alert-warning" role="alert">
+          Loading ...
+        </div>
+      </div>
+    );
   }
 
   return (
-    <div>
+    <div className="container">
       <h1>Generos</h1>
       <Table dark>
         <thead>

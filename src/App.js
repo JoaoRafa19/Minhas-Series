@@ -21,7 +21,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/generos" element={<Generos />} />
-          <Route path="/generos/novo" element={<NovoGenero />} />
+          <Route exact path="/generos/novo" element={<NovoGenero />} />
         </Routes>
         <p>{JSON.stringify(data)}</p>
       </BrowserRouter>
