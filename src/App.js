@@ -5,15 +5,9 @@ import Header from "./components/header";
 import Home from "./components/home";
 import axios from "axios";
 import NovoGenero from "./components/NovoGenero";
+import EditGenero from "./components/genero_edit";
 
 function App() {
-  const [data, setData] = React.useState({});
-  useEffect(() => {
-    axios.get("/api").then((res) => {
-      setData(res.data);
-    });
-  }, []);
-
   return (
     <div>
       <BrowserRouter>
@@ -21,9 +15,9 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/generos" element={<Generos />} />
-          <Route path="/generos/novo" element={<NovoGenero />} />
+          <Route exact path="/generos/:id" element={<EditGenero />} />
+          <Route exact path="/generos/novo" element={<NovoGenero />} />
         </Routes>
-        <p>{JSON.stringify(data)}</p>
       </BrowserRouter>
     </div>
   );

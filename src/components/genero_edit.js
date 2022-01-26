@@ -1,20 +1,24 @@
 import React from "react";
 import axios from "axios";
-import { Navigate } from "react-router-dom";
+import { Navigate } from "react-router";
 
-const NovoGenero = () => {
+const EditGenero = (props) => {
   const [name, setName] = React.useState("");
   const [success, setSuccess] = React.useState(false);
+
+  React.useEffect(() => {}, []);
 
   const onChange = (event) => {
     event.preventDefault();
     setName(event.target.value);
   };
 
+  console.log(props);
+
   const saveGenre = (event) => {
     event.preventDefault();
     if (name.length > 0) {
-      axios.post("/api/genres", { name }).then((res) => {
+      axios.put("/api/genres", { name }).then((res) => {
         setName("");
         setSuccess(true);
       });
@@ -27,7 +31,7 @@ const NovoGenero = () => {
 
   return (
     <div className="container">
-      <h1>Novo Genero </h1>
+      <h1>Editar Genero </h1>
       <form>
         <div className="form-group">
           <label htmlFor="name">Nome</label>
@@ -36,7 +40,7 @@ const NovoGenero = () => {
             className="form-control"
             id="name"
             value={name}
-            placeholder="Nome do novo genero"
+            placeholder="Novo nome do genero"
             onChange={onChange}
           />
         </div>
@@ -53,4 +57,4 @@ const NovoGenero = () => {
   );
 };
 
-export default NovoGenero;
+export default EditGenero;
