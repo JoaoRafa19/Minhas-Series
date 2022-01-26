@@ -45,7 +45,7 @@ const NovoGenero = () => {
             A simple success alert—check it out!
           </div>
         </div>
-        <button type="button" className="btn btn-primary" onClick={saveGenre}>
+        <button type="button" className="btn btn-secondary" onClick={saveGenre}>
           Salvar
         </button>
       </form>
