@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { Table } from "reactstrap";
+import { Link } from "react-router-dom";
 
 function Generos() {
   const [data, setData] = React.useState([]);
@@ -37,6 +38,14 @@ function Generos() {
   return (
     <div className="container">
       <h1>Generos</h1>
+      <div className="row">
+        <Link
+          to="/generos/novo"
+          className="btn btn-secondary mt-1 mb-2 p-2 mx-auto w-25"
+        >
+          Adicionar
+        </Link>
+      </div>
       <Table dark>
         <thead>
           <tr>
