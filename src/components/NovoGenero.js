@@ -40,12 +40,12 @@ const NovoGenero = () => {
             onChange={onChange}
           />
         </div>
-        <div className="mt-2">
-          <div class="alert alert-success" role="alert">
-            A simple success alert—check it out!
-          </div>
-        </div>
-        <button type="button" className="btn btn-secondary" onClick={saveGenre}>
+
+        <button
+          type="button"
+          className="btn btn-secondary mt-2"
+          onClick={saveGenre}
+        >
           Salvar
         </button>
       </form>
