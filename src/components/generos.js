@@ -26,11 +26,10 @@ function Generos() {
         <td>
           <button
             type="button"
-            className="btn btn-danger"
+            className="btn btn-danger close"
             onClick={() => deleteGenre(_genero.id)}
           >
-            {" "}
-            -{" "}
+            <span aria-hidden="true">&times;</span>
           </button>
           <Link className="btn btn-warning mx-2" to={`/generos/${_genero.id}`}>
             Edit
