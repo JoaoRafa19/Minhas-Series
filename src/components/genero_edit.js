@@ -1,24 +1,27 @@
 import React from "react";
 import axios from "axios";
-import { Navigate } from "react-router";
+import { Navigate, useParams } from "react-router";
 
-const EditGenero = (props) => {
+const EditGenero = () => {
+  const { id } = useParams();
   const [name, setName] = React.useState("");
   const [success, setSuccess] = React.useState(false);
 
-  React.useEffect(() => {}, []);
+  React.useEffect(() => {
+    axios.get(`/api/genres/${id}`).then((res) => {
+      setName(res.data.name);
+    });
+  }, [id]);
 
   const onChange = (event) => {
     event.preventDefault();
     setName(event.target.value);
   };
 
-  console.log(props);
-
   const saveGenre = (event) => {
     event.preventDefault();
     if (name.length > 0) {
-      axios.put("/api/genres", { name }).then((res) => {
+      axios.put(`/api/genres/${id}`, { name }).then((res) => {
         setName("");
         setSuccess(true);
       });
