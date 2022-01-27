@@ -30,11 +30,11 @@ function Header() {
                 Generos
               </NavLink>
             </NavItem>
-            <NavItem>
+            {/* <NavItem>
               <NavLink tag={Link} to={"/generos/novo"}>
                 Novo Genero
               </NavLink>
-            </NavItem>
+            </NavItem> */}
           </Nav>
         </Collapse>
       </Navbar>
