@@ -14,6 +14,8 @@ const InfoSerie = () => {
     });
   }, [id]);
 
+  //custom header
+
   const onChange = (event) => {
     event.preventDefault();
     setName(event.target.value);
