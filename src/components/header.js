@@ -17,13 +17,13 @@ function Header() {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="nav navbar-inverse navbar-static-top">
-      <div className="container-fluid">
-        <Navbar color="light" light expand="md">
+    <nav className="container-fluid navbar sticky-top navbar-dark bg-dark">
+      <div className="container d-block">
+        <Navbar light expand="md">
           <NavbarBrand tag={Link} to={"/"}>
             Minhas Series
           </NavbarBrand>
-          <NavbarToggler onClick={toggle}></NavbarToggler>
+          <NavbarToggler className="" onClick={toggle}></NavbarToggler>
           <Collapse isOpen={isOpen} navbar>
             <Nav className="ml-5" navbar>
               <NavItem>
