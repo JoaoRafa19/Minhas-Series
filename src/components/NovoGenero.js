@@ -28,7 +28,7 @@ const NovoGenero = () => {
   return (
     <div className="container">
       <h1>Novo Genero </h1>
-      <form>
+      <form onSubmit={saveGenre}>
         <div className="form-group">
           <label htmlFor="name">Nome</label>
           <input
