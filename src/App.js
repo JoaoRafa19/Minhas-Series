@@ -5,6 +5,8 @@ import Header from "./components/header";
 import Home from "./components/home";
 import NovoGenero from "./components/novoGenero";
 import EditarGenero from "./components/editarGenero";
+import Series from "./components/series";
+import NovaSerie from "./components/novaSerie";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
           <Route path="/generos" element={<Generos />} />
           <Route exact path="/generos/:id" element={<EditarGenero />} />
           <Route exact path="/generos/novo" element={<NovoGenero />} />
+          <Route path="/series" element={<Series />} />
+          <Route exact path="/series/novo" element={<NovaSerie />} />
         </Routes>
       </BrowserRouter>
     </div>
