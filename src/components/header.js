@@ -31,6 +31,11 @@ function Header() {
                   Generos
                 </NavLink>
               </NavItem>
+              <NavItem>
+                <NavLink tag={Link} to={"/series"}>
+                  Series
+                </NavLink>
+              </NavItem>
             </Nav>
           </Collapse>
         </Navbar>
