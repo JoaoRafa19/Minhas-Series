@@ -3,15 +3,19 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Generos from "./components/generos";
 import Header from "./components/header";
 import Home from "./components/home";
+import NovoGenero from "./components/novoGenero";
+import EditarGenero from "./components/editarGenero";
 
 function App() {
   return (
     <div>
-      <Header />
       <BrowserRouter>
+        <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route exact path="/" element={<Home />} />
           <Route path="/generos" element={<Generos />} />
+          <Route exact path="/generos/:id" element={<EditarGenero />} />
+          <Route exact path="/generos/novo" element={<NovoGenero />} />
         </Routes>
       </BrowserRouter>
     </div>
