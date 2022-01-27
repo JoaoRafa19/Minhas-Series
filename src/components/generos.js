@@ -32,7 +32,7 @@ function Generos() {
             {" "}
             -{" "}
           </button>
-          <Link className="btn btn-info mx-2" to={`/generos/${_genero.id}`}>
+          <Link className="btn btn-warning mx-2" to={`/generos/${_genero.id}`}>
             Edit
           </Link>
         </td>
