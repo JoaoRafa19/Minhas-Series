@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import { Navigate, useParams } from "react-router";
 
-const EditGenero = () => {
+const EditarGenero = () => {
   const { id } = useParams();
   const [name, setName] = React.useState("");
   const [success, setSuccess] = React.useState(false);
@@ -60,4 +60,4 @@ const EditGenero = () => {
   );
 };
 
-export default EditGenero;
+export default EditarGenero;

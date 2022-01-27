@@ -17,28 +17,25 @@ function Header() {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div>
-      <Navbar color="light" light expand="md">
-        <NavbarBrand tag={Link} to={"/"}>
-          Minhas Series
-        </NavbarBrand>
-        <NavbarToggler onClick={toggle}></NavbarToggler>
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="ml-auto" navbar>
-            <NavItem>
-              <NavLink tag={Link} to={"/generos"}>
-                Generos
-              </NavLink>
-            </NavItem>
-            {/* <NavItem>
-              <NavLink tag={Link} to={"/generos/novo"}>
-                Novo Genero
-              </NavLink>
-            </NavItem> */}
-          </Nav>
-        </Collapse>
-      </Navbar>
-    </div>
+    <nav className="nav navbar-inverse navbar-static-top">
+      <div className="container-fluid">
+        <Navbar color="light" light expand="md">
+          <NavbarBrand tag={Link} to={"/"}>
+            Minhas Series
+          </NavbarBrand>
+          <NavbarToggler onClick={toggle}></NavbarToggler>
+          <Collapse isOpen={isOpen} navbar>
+            <Nav className="ml-5" navbar>
+              <NavItem>
+                <NavLink tag={Link} to={"/generos"}>
+                  Generos
+                </NavLink>
+              </NavItem>
+            </Nav>
+          </Collapse>
+        </Navbar>
+      </div>
+    </nav>
   );
 }
 

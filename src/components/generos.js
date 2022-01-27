@@ -42,7 +42,7 @@ function Generos() {
 
   return (
     <div className="container">
-      <h1>Generos</h1>
+      <h1>Gêneros</h1>
       {data.length === 0 && (
         <div className="container">
           <div className="row">
